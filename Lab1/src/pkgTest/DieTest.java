@@ -1,6 +1,6 @@
 package pkgTest;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.*; 
 
 import org.junit.Test;
 
@@ -13,6 +13,8 @@ public class DieTest {
 
 		for (int a = 0; a < 10000; a++) {
 			Die d = new Die();
+			assertTrue(1<=d.getDieValue() && d.getDieValue()<=6);
+			
 			// TODO: Make sure value of die is between 1 and 6.
 		}
 

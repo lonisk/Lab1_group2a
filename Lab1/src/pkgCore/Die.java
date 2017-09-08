@@ -6,9 +6,10 @@ public class Die {
 
 	public Die() {
 		// TODO: Determine DieVaue.. a random number between 1 and 6
+		this.DieValue = (int) (Math.random() * 6 + 1);
 	}
 
 	public int getDieValue() {
-		return DieValue;
+		return this.DieValue;
 	}
 }
