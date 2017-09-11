@@ -9,17 +9,17 @@ public class Round {
 	private LinkedList<Roll> rolls = new LinkedList<Roll>();
 
 	public Round() {
-		//come out roll
+		// come out roll
 		Roll r1 = new Roll();
 		rolls.add(r1);
 		ComeOutScore = r1.getScore();
-		
+
 		if (ComeOutScore == 2 || ComeOutScore == 3 || ComeOutScore == 12) {
 			eGameResult = eGameResult.CRAPS;
 		} else if (ComeOutScore == 7 || ComeOutScore == 11) {
 			eGameResult = eGameResult.NATURAL;
-			
-			//loop until point made or seven-out
+
+			// loop until point made or seven-out
 		} else {
 			while (true) {
 				Roll r2 = new Roll();
@@ -41,7 +41,8 @@ public class Round {
 		// Return the roll count
 		return rolls.size();
 	}
-	//make result accessible to RoundTest.java class
+
+	// make result accessible to RoundTest.java class
 	public eGameResult geteGameResult() {
 		return eGameResult;
 	}
