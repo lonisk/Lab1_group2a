@@ -11,11 +11,10 @@ public class RollTest {
 
 	@Test
 	public void TestRoll() {
-
+		//make sure roll is a value between 2 and 12
 		for (int a = 0; a < 10000; a++) {
 			Roll r = new Roll();
-			assertTrue(1<=r.getScore() && r.getScore()<=12);
-			// TODO: Make sure value of roll is between 1 and 12.
+			assertTrue(2 <=r.getScore() && r.getScore() <= 12);
 		}
 
 	}
